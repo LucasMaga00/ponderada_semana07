@@ -42,7 +42,7 @@ Qual das seguintes alternativas melhor descreve o que o código faz?
 
 A) O código avalia a expressão booleana, imprime o resultado `false`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
-B) O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
+~~B)~~ O código avalia a expressão booleana, imprime o resultado `true`, calcula a soma dos números de 1 a 5 e imprime o resultado no console.
 
 C) O código avalia a expressão booleana, imprime o resultado `true` e verifica se o número 5 está presente na lista de números.
 
@@ -106,7 +106,7 @@ Escolha a opção que responde corretamente qual seria a saída após a execuç�
 
 A) As funções calcularOrcamento() e calcularOrcamento2() teriam a mesma saída: 'Seu saldo é negativo de -1050.'
 
-B) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'
+~~B)~~ A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -1050.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -100.'
 
 C) A saída de calcularOrcamento() seria: 'Seu saldo é negativo de -100.' e a de calcularOrcamento2() seria: 'Seu saldo é negativo de -1050.'
 
@@ -135,7 +135,7 @@ A) O código verifica se o número é divisível por 3 e, se for, exibe a mensag
 
 B) O código verifica se o número é par ou ímpar. Se for par, exibe a mensagem "O número é par!". Se for ímpar, exibe a mensagem "O número é ímpar!".
 
-C) O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
+~~C)~~ O código verifica se o número é par, ímpar ou divisível por 3. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3, exibe a mensagem "O número é divisível por 3!". Se for ímpar, exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
 D) O código verifica se o número é par, se é divisível por 3 ou se é ímpar. Se for par, exibe a mensagem "O número é par!". Se for divisível por 3 (e não for par), exibe a mensagem "O número é divisível por 3!". Se for ímpar (e não for divisível por 3), exibe a mensagem "O número é ímpar e não é divisível por 3!".
 
@@ -201,7 +201,7 @@ Compra 3 aprovada. Saldo restante: 400
 Compra 4 negada. Saldo insuficiente e limite de crédito excedido.
 
 
-D)
+~~D)~~
 
 Compra 1 aprovada. Saldo restante: 800
 
@@ -221,7 +221,7 @@ Escolha a opção que responde corretamente:
 
 A) Setup -> Update -> Draw
 
-B) Preload -> Create -> Update
+~~B)~~ Preload -> Create -> Update
 
 C) Load -> Initialize -> Render
 
@@ -234,7 +234,7 @@ Escolha a opção que responde corretamente:
 
 A) Renderizar gráficos 3D para jogos em HTML5.
 
-B) Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
+~~B)~~ Simular interações físicas realistas, como colisões e movimentos, em jogos 2D.
 
 C) Criar efeitos de áudio para melhorar a experiência do usuário em jogos.
 
@@ -246,6 +246,20 @@ ______
 
 **7)** Implemente o pseudocódigo para o algoritmo representado no fluxograma da imagem.
 ![Uma imagem](assets/image.png)
+
+```javascript
+
+idade = prompt("Insira sua idade")
+
+if (idade < 16) {
+    console.log("Não pode votar!")
+} else if (idade >= 16 && idade < 18) {
+    console.log("Voto facultativo!")
+} else {
+    console.log('Voto obrigatório')
+}
+
+```
 ______
 
 **8)** Considere a implementação da classe base FormaGeometrica em um sistema de modelagem de formas geométricas. Sua tarefa é implementar, utilizando pseudocódigo, as classes derivadas Retangulo e Circulo, que herdam da classe FormaGeometrica, adicionando atributos específicos e métodos para calcular a área de um retângulo e de um círculo, respectivamente.
@@ -263,6 +277,46 @@ Classe FormaGeometrica:
 
 ```
 
+```
+
+inicio 
+
+Classe FormaGeometrica:
+    Atributos:
+        - cor
+
+    Método Construtor(cor):
+        Define o valor do atributo cor com o valor passado como parâmetro.
+
+    Método CalcularArea():
+        # Implementação genérica para cálculo de área, a ser sobrescrita pelas subclasses.
+
+Classe Retangulo herda FormaGeometrica
+    Atributos herdados:
+        - cor
+    Atributos novos: 
+        - comprimento
+        - largura
+        - area
+
+    Método CalcularArea():
+        area = comprimento * largura
+
+Classe Circulo herda FormaGeometrica
+    Atributos herdados:
+        - cor
+    Atributos novos:
+        - pi
+        - raio
+        - area
+
+    Método CalcularArea():
+        area = pi * (raio * raio)
+
+fim
+
+```
+
 ______
 
 **9)** Você foi contratado(a) como estagiário(a) da Tesla e está participando do desenvolvimento de um programa para simular o desempenho de um carro elétrico em uma corrida. Seu objetivo é determinar em quantos minutos o carro levará para completar uma determinada distância, levando em consideração uma velocidade inicial e uma taxa de aceleração constante. No entanto, você deseja garantir que o carro não exceda uma velocidade máxima nem que a corrida demore mais do que um tempo máximo. Implemente a lógica dessa simulação em pseudocódigo.
@@ -270,6 +324,41 @@ ______
 Considere a fórumla de atualização velocidade:
 ```
     velocidade = velocidadeInicial + aceleracao*tempo
+```
+
+```
+
+inicio
+
+    classe carroCorrida
+        Atributos:
+            - velocidade = velocidadeInicial + aceleracao*tempo
+            velocidadeInicial = 0
+            aceleracao
+            tempo
+            distancia 
+            distanciaTotal = 1000
+            velocidadeMax = 60km/k
+            tempoMax = 1min
+
+        Método IniciarCorrida()
+            acelerar
+
+        Método PararCarro()
+            velocidade = 0
+
+        If (velocidade = velocidadeMax)
+            aceleracao = constante
+
+        If (tempo > 40)
+            aceleracao += 1;
+
+        If (distancia = distanciaTotal)
+            PararCarro()
+            print('O tempo total da corrida é de' tempo)
+
+fim
+
 ```
 
 ______
@@ -300,4 +389,25 @@ matrizB <- [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
 matrizSoma <- SomaDeMatrizes(matrizA, matrizB)
 Escrever("Soma das matrizes:")
 ImprimirMatriz(matrizSoma)
+```
+
+```
+
+inicio
+
+Função MultiplicacaoMatriz(matrizA, matrizB):
+
+    Se numeroDeColunas(matrizA) ≠ numeroDeLinhas(matrizB) então:
+        Retornar "As matrizes não podem ser multiplicadas, porque o número com linhas com número de colunas é difente."
+    Senão:
+        primeiraLinha(matrizA) * primeiraColuna(matrizB);
+        primeiraLinha(matrizA) * segundaColuna(matrizB);
+        segundaLinha(matrizA) * primeiraColuna(matrizB);
+        segundaLinha(matrizA) * segundaColuna(matrizB);
+        gerar matrizResultado com resultados;
+
+    Retornar matrizResultado
+
+fim
+
 ```
